@@ -9,8 +9,8 @@ export default function JoinGroup() {
   const { groupId: paramGroupId } = useParams();
   const [searchParams] = useSearchParams();
   
-  // Either from route /join/:groupId or from input field
-  const [groupIdInput, setGroupIdInput] = useState(paramGroupId || '');
+  // Either from route /join/:groupId, from query param ?id=, or from input field
+  const [groupIdInput, setGroupIdInput] = useState(paramGroupId || searchParams.get('id') || '');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
