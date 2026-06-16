@@ -23,10 +23,6 @@ export default function Signup() {
     if (error) {
       setError(error.message);
       setLoading(false);
-    } else if (data?.session === null) {
-      // Supabase email verification is enabled
-      setError('Success! Please check your email for the verification link.');
-      setLoading(false);
     } else {
       navigate('/dashboard');
     }
