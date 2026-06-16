@@ -75,6 +75,28 @@ export default function Signup() {
         <div className="mt-6 text-center text-sm opacity-80">
           Already have an account? <Link to="/login" className="text-primary hover:underline">Log in</Link>
         </div>
+        
+        <div className="mt-6 pt-6 border-t border-white/10">
+          <p className="text-sm opacity-80 mb-3 text-center">Demo Credentials:</p>
+          <div className="flex flex-col gap-2">
+            <Button 
+              type="button" 
+              variant="secondary" 
+              className="text-xs py-2"
+              onClick={() => { setEmail('tea@gmail.com'); setPassword('9999999999'); setName('Tea User'); }}
+            >
+              Fill User 1 (tea@gmail.com)
+            </Button>
+            <Button 
+              type="button" 
+              variant="secondary" 
+              className="text-xs py-2"
+              onClick={() => { setEmail('chai@gmail.com'); setPassword('9999999999'); setName('Chai User'); }}
+            >
+              Fill User 2 (chai@gmail.com)
+            </Button>
+          </div>
+        </div>
       </div>
     </div>
   );
